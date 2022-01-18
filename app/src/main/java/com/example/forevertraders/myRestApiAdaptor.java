@@ -36,6 +36,7 @@ public class myRestApiAdaptor extends RecyclerView.Adapter<myRestApiAdaptor.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.restTitle.setText(list.get(position).getTitle());
+        holder.price.setText(list.get(position).getPrice());
         Glide.with(context).load(list.get(position).getImage()).into(holder.imageView);
     }
 
@@ -45,12 +46,14 @@ public class myRestApiAdaptor extends RecyclerView.Adapter<myRestApiAdaptor.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView restTitle;
+        TextView restTitle,price;
         ImageView imageView;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             restTitle = itemView.findViewById(R.id.shoeName);
             imageView=itemView.findViewById(R.id.srcImage);
+            price=itemView.findViewById(R.id.price);
         }
 
     }
