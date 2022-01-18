@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff0e3"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_height="200dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/banner"
+                    android:scaleType="centerCrop"
+                    >
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+<!--            On Sale Now-->
+            <TextView
+                android:background="#fff0e3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textFontWeight="800"
+                android:textSize="16dp"
+                android:text="ON SALE NOW">
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/onSaleNow"
+                android:layout_width="match_parent"
+                android:backgroundTint="#fff0e3"
+                android:layout_height="200dp"
+                android:layout_marginVertical="10dp"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+<!--            New Arrival-->
+<!--            <TextView-->
+<!--                android:background="#fff0e3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:text="New Arrival">-->
+
+<!--            </TextView>-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/newArrival"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:background="@color/white"-->
+<!--                >-->
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
+<!--            &lt;!&ndash;            SHOP WOMEN&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:background="#fff0e3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:text="SHOP WOMEN">-->
+
+<!--            </TextView>-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/shopWomen"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:background="@color/white"-->
+<!--                >-->
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
+<!--            &lt;!&ndash;            SHOP MEN&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:background="#fff0e3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:text="SHOP MEN">-->
+
+<!--            </TextView>-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/shopMen"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:background="@color/white"-->
+<!--                >-->
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
+<!--            &lt;!&ndash;            SHOP KIDS&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:background="#fff0e3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:text="New Arrival">-->
+
+<!--            </TextView>-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/shopKids"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:background="@color/white"-->
+<!--                >-->
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

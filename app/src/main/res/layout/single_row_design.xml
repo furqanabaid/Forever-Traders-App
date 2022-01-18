@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/srcImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner">
+            </ImageView>
+            <ImageView
+                android:src="@drawable/gradient_effect"
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+            </ImageView>
+            <TextView
+                android:id="@+id/shoeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_gravity="bottom"
+                android:paddingStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="15dp"
+                android:maxLines="1"
+               >
+            </TextView>
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
