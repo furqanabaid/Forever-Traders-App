@@ -24,6 +24,38 @@
                 android:layout_height="200dp">
             </ImageView>
             <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textFontWeight="1000"
+                android:layout_gravity="bottom"
+                android:paddingStart="10dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="15dp"
+                android:paddingLeft="10dp"
+                android:maxLines="1"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/dollor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textFontWeight="1000"
+                android:layout_gravity="bottom"
+                android:paddingStart="10dp"
+                android:layout_marginBottom="40dp"
+
+                android:paddingLeft="10dp"
+                android:maxLines="1"
+                >
+            </TextView>
+            <TextView
                 android:id="@+id/shoeName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,12 +64,16 @@
                 android:textSize="14dp"
                 android:layout_gravity="bottom"
                 android:paddingStart="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="10dp"
                 android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
                 android:maxLines="1"
                >
             </TextView>
+
         </FrameLayout>
+
 
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

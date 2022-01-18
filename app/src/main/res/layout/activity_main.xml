@@ -5,8 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff0e3"
+    android:background="#262626"
     tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation_menu" />
+
+    </androidx.cardview.widget.CardView>
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -27,109 +49,29 @@
                 android:layout_margin="10dp"
                 app:cardCornerRadius="10dp"
                 android:layout_height="200dp">
-                <ImageView
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageSlideShow"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:src="@drawable/banner"
-                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    app:iss_period="1000"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="1000"
+                    app:iss_title_background="@drawable/gradient"
                     >
 
-                </ImageView>
+                </com.denzcoskun.imageslider.ImageSlider>
 
             </androidx.cardview.widget.CardView>
-<!--            On Sale Now-->
-            <TextView
-                android:background="#fff0e3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:textFontWeight="800"
-                android:textSize="16dp"
-                android:text="ON SALE NOW">
-            </TextView>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/onSaleNow"
                 android:layout_width="match_parent"
-                android:backgroundTint="#fff0e3"
-                android:layout_height="200dp"
+                android:backgroundTint="#262626"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
                 android:layout_gravity="start"
                 android:background="@color/white"
                 >
             </androidx.recyclerview.widget.RecyclerView>
-<!--            New Arrival-->
-<!--            <TextView-->
-<!--                android:background="#fff0e3"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:text="New Arrival">-->
-
-<!--            </TextView>-->
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/newArrival"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="200dp"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:layout_gravity="start"-->
-<!--                android:background="@color/white"-->
-<!--                >-->
-<!--            </androidx.recyclerview.widget.RecyclerView>-->
-<!--            &lt;!&ndash;            SHOP WOMEN&ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:background="#fff0e3"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:text="SHOP WOMEN">-->
-
-<!--            </TextView>-->
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/shopWomen"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="200dp"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:layout_gravity="start"-->
-<!--                android:background="@color/white"-->
-<!--                >-->
-<!--            </androidx.recyclerview.widget.RecyclerView>-->
-<!--            &lt;!&ndash;            SHOP MEN&ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:background="#fff0e3"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:text="SHOP MEN">-->
-
-<!--            </TextView>-->
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/shopMen"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="200dp"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:layout_gravity="start"-->
-<!--                android:background="@color/white"-->
-<!--                >-->
-<!--            </androidx.recyclerview.widget.RecyclerView>-->
-<!--            &lt;!&ndash;            SHOP KIDS&ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:background="#fff0e3"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:text="New Arrival">-->
-
-<!--            </TextView>-->
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/shopKids"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="200dp"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:layout_gravity="start"-->
-<!--                android:background="@color/white"-->
-<!--                >-->
-<!--            </androidx.recyclerview.widget.RecyclerView>-->
-
         </LinearLayout>
 
 

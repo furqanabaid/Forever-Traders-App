@@ -4,7 +4,7 @@ public class myRestApiModel {
     private float userId;
     private float id;
     private String title;
-    private String body;
+    private String price;
 
     public String getImage() {
         return image;
@@ -23,7 +23,7 @@ public class myRestApiModel {
         this.userId = userId;
         this.id = id;
         this.title = title;
-        this.body = body;
+        this.price = body;
         this.image = image;
     }
 // Getter Methods
@@ -40,8 +40,8 @@ public class myRestApiModel {
         return title;
     }
 
-    public String getBody() {
-        return body;
+    public String getPrice() {
+        return price;
     }
 
     // Setter Methods
@@ -58,7 +58,7 @@ public class myRestApiModel {
         this.title = title;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setPrice(String price) {
+        this.price = price;
     }
 }
