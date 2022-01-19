@@ -1,12 +1,14 @@
 package com.example.forevertraders;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,9 +37,26 @@ public class myRestApiAdaptor extends RecyclerView.Adapter<myRestApiAdaptor.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.restTitle.setText(list.get(position).getTitle());
-        holder.price.setText(list.get(position).getPrice());
+        String title=list.get(position).getTitle();
+        String price=list.get(position).getPrice();
+        holder.restTitle.setText(title);
+        holder.price.setText(price);
+        Integer id=(int) list.get(position).getId();
+       // holder.id.setText(list.get(position).getId());
         Glide.with(context).load(list.get(position).getImage()).into(holder.imageView);
+        holder.v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context,addToCart.class);
+                Toast.makeText(context, " "+id, Toast.LENGTH_SHORT).show();
+                intent.putExtra("id",id);
+//                intent.putExtra("price",price);
+//                intent.putExtra("description",list.get(position).getDescription());
+//                intent.putExtra("url",list.get(position).getImage());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -46,15 +65,16 @@ public class myRestApiAdaptor extends RecyclerView.Adapter<myRestApiAdaptor.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView restTitle,price;
+        TextView restTitle,price,id;
         ImageView imageView;
-
+        View v;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             restTitle = itemView.findViewById(R.id.shoeName);
             imageView=itemView.findViewById(R.id.srcImage);
             price=itemView.findViewById(R.id.price);
+            id=itemView.findViewById(R.id.id);
+            v=itemView;
         }
-
     }
 }

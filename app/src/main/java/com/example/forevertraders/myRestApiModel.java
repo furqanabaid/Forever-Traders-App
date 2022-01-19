@@ -6,6 +6,16 @@ public class myRestApiModel {
     private String title;
     private String price;
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    private String description;
+
     public String getImage() {
         return image;
     }
@@ -19,12 +29,13 @@ public class myRestApiModel {
     public myRestApiModel() {
     }
 
-    public myRestApiModel(float userId, float id, String title, String body, String image) {
+    public myRestApiModel(float userId, float id, String title, String body, String image,String description) {
         this.userId = userId;
         this.id = id;
         this.title = title;
         this.price = body;
         this.image = image;
+        this.description=description;
     }
 // Getter Methods
 

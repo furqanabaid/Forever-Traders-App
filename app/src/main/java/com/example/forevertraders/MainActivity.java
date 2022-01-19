@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
         //Bottom Navigation Listener
         navView = findViewById(R.id.bottom_navigation);
+        Intent intent=new Intent(MainActivity.this,Cart.class);
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.Cart:
+                        startActivity(intent);
                         return true;
 
                     case R.id.Profile:

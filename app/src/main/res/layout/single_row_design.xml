@@ -24,6 +24,12 @@
                 android:layout_height="200dp">
             </ImageView>
             <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+            </TextView>
+            <TextView
                 android:id="@+id/price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
