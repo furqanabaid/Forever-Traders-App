@@ -17,7 +17,7 @@
 
         <!-- Edit text for email -->
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/name_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your Name"
@@ -26,7 +26,7 @@
 
         <!-- Edit text for password -->
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/email_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your Email"

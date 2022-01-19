@@ -35,8 +35,8 @@ public class SeassionActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         // initialising all views through id defined above
-        nameTextView = findViewById(R.id.name);
-        emailTextView = findViewById(R.id.email);
+        nameTextView = findViewById(R.id.name_text);
+        emailTextView = findViewById(R.id.email_text);
         passwordTextView = findViewById(R.id.passwd);
         Btn = findViewById(R.id.btnregister);
         progressbar = findViewById(R.id.progressbar);

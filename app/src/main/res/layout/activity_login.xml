@@ -20,14 +20,14 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/email_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <!-- Edit text for email -->
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/email_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter your Email"
@@ -47,8 +47,8 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintStart_toStartOf="@+id/email_text"
+        app:layout_constraintTop_toBottomOf="@+id/email_text" />
 
     <!-- Button for Login with text "Login" -->
     <Button
@@ -56,6 +56,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:onClick="login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/password"
@@ -66,12 +67,11 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/button4"
+        app:layout_constraintTop_toBottomOf="@id/button3" />
 
     <Button
         android:id="@+id/button3"
