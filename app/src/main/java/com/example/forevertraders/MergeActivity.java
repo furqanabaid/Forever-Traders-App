@@ -36,7 +36,6 @@ public class MergeActivity extends AppCompatActivity {
                         FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.fragment,homeFragment);
                         transaction.commit();
-
                         return true;
 
                     case R.id.Cart:

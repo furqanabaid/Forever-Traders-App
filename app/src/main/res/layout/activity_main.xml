@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#262626"
-    tools:context=".MainActivity">
-
-
+    tools:context=".HomeFragment">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -42,7 +40,24 @@
                 </com.denzcoskun.imageslider.ImageSlider>
 
             </androidx.cardview.widget.CardView>
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All Products"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:background="@drawable/text_border"
+                android:padding="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/white"
+                ></TextView>
+<ProgressBar
+    android:id="@+id/progressBar1"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:progressTint="@color/white"
+    android:layout_centerHorizontal="true">
+</ProgressBar>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/onSaleNow"
                 android:layout_width="match_parent"
