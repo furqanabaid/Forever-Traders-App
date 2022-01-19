@@ -56,11 +56,15 @@
 
             <TextView
                 android:id="@+id/name_1"
-                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="Name"
+                android:background="@drawable/text_border"
+                android:layout_marginHorizontal="20dp"
                 android:textAlignment="center"
+                android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"></TextView>
 
@@ -71,7 +75,10 @@
 
             <TextView
                 android:id="@+id/email_1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/text_border"
+                android:padding="10dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Email"

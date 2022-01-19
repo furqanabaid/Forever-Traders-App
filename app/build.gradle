@@ -54,4 +54,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     //Image Slide Show
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+    //Lottie Animation
+    implementation 'com.airbnb.android:lottie:4.2.2'
 }
