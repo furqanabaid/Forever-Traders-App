@@ -62,6 +62,7 @@
                 </com.denzcoskun.imageslider.ImageSlider>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/onSaleNow"
                 android:layout_width="match_parent"
