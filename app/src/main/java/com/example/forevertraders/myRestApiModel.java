@@ -6,13 +6,20 @@ public class myRestApiModel {
     private String title;
     private String price;
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    private String category;
+
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     private String description;
 
@@ -29,8 +36,9 @@ public class myRestApiModel {
     public myRestApiModel() {
     }
 
-    public myRestApiModel(float userId, float id, String title, String body, String image,String description) {
+    public myRestApiModel(float userId, float id, String title, String body, String image,String description,String catagory) {
         this.userId = userId;
+        this.category =catagory;
         this.id = id;
         this.title = title;
         this.price = body;

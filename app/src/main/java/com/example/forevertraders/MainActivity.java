@@ -86,13 +86,11 @@ public class MainActivity extends AppCompatActivity {
                     onSaleNow.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
                     onSaleNow.setAdapter(adaptor);
                     Log.d("TAG","Data Recieved");
-                    //Toast.makeText(MainActivity.this, "Data Recieved.", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Toast.makeText(MainActivity.this, "List is empty", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<List<myRestApiModel>> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "Data Recieve Failed.", Toast.LENGTH_SHORT).show();

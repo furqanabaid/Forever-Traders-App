@@ -81,9 +81,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Description"
+                android:text="Catagory"
                 android:textColor="@color/white"
                 android:textSize="14dp"></TextView>
+
+            <TextView
+                android:id="@+id/catagory_atc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Catagory here"
+                android:textColor="@color/white"
+                android:textSize="18dp"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="14dp">
+
+        </TextView>
 
             <TextView
                 android:id="@+id/description_atc"
@@ -92,13 +110,61 @@
                 android:layout_marginTop="10dp"
                 android:text="Description here"
                 android:textColor="@color/white"
-                android:textSize="18dp"></TextView>
+                android:textSize="18dp">
 
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Quantity"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="14dp">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:onClick="btn_minus"
+                    android:id="@+id/minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/minus"
+                    android:foregroundGravity="center">
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                <TextView
+                    android:id="@+id/countText"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center">
+
+                </TextView>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:onClick="btn_plus"
+                    android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/plus"
+                    android:foregroundGravity="center">
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
     <Button
+        android:onClick="addToCart"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
