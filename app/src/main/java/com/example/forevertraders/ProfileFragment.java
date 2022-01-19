@@ -62,7 +62,7 @@ public class ProfileFragment extends Fragment {
         public void onClick(View v) {
             AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
             builder.setMessage("Do you want to Logout ?");
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     fauth.signOut();
@@ -71,7 +71,7 @@ public class ProfileFragment extends Fragment {
                     getActivity().finish();
                     startActivity(in);
                 }
-            }).setNegativeButton("CANCEL",null);
+            }).setNegativeButton("No",null);
             AlertDialog alert= builder.create();
             alert.show();
 
