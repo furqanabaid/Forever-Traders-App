@@ -119,7 +119,7 @@ public class Signup extends AppCompatActivity {
                             // if the user created intent to login activity
                             Intent intent
                                     = new Intent(Signup.this,
-                                    MainActivity.class);
+                                    loginActivity.class);
                             startActivity(intent);
                         }
                         else {

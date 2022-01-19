@@ -37,7 +37,7 @@ public class loginActivity extends AppCompatActivity {
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         if(user!=null)
         {
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this,MergeActivity.class));
             finish();
         }
     }
@@ -61,7 +61,7 @@ public class loginActivity extends AppCompatActivity {
             {
                 progressbar.setVisibility(View.GONE);
                 Toast.makeText(loginActivity.this,  "Login Successful", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(loginActivity.this,MainActivity.class));
+                startActivity(new Intent(loginActivity.this,MergeActivity.class));
             }
             else
             {
