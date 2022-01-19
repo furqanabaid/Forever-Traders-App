@@ -55,7 +55,6 @@ public class myRestApiAdaptor extends RecyclerView.Adapter<myRestApiAdaptor.View
                 intent.putExtra("description",description);
                 intent.putExtra("catagory",catagory);
                 intent.putExtra("url",image);
-                Toast.makeText(context, " "+image, Toast.LENGTH_SHORT).show();
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

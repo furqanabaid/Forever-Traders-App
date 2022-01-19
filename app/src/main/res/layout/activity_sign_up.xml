@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/animation">
+        app:lottie_rawRes="@raw/register">
 
     </com.airbnb.lottie.LottieAnimationView>
     <!-- Edit text for email -->
@@ -81,7 +81,8 @@
         android:layout_height="587dp"
         android:foregroundGravity="bottom|center_vertical|clip_horizontal"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/btnregister"
-        app:layout_constraintStart_toStartOf="@+id/btnregister"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnregister" />
 </androidx.constraintlayout.widget.ConstraintLayout>
