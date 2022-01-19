@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class loginActivity extends AppCompatActivity {
     FirebaseAuth fauth;
@@ -28,6 +29,17 @@ public class loginActivity extends AppCompatActivity {
         password=findViewById(R.id.password);
         progressbar=findViewById(R.id.progressBar);
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        if(user!=null)
+        {
+            startActivity(new Intent(this,MainActivity.class));
+            finish();
+        }
     }
 
     public void Reset_password(View view) {
