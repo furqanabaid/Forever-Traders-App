@@ -14,17 +14,12 @@
         <activity
             android:name=".profileMainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".ViewEmailActivity"
+            android:name=".ForgotPasswordTwo"
             android:exported="true"></activity>
         <activity
-            android:name=".ForgotPasswordActivity"
+            android:name=".ForgotPassword"
             android:exported="true"></activity>
         <activity
             android:name=".loginActivity"
@@ -36,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SeassionActivity"
+            android:name=".Signup"
             android:exported="true"></activity>
         <activity
             android:name=".addToCart"

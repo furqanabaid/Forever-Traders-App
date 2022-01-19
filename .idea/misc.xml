@@ -4,16 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/drawable/gradient_effect.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/activity_add_to_cart.xml" value="0.264" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/activity_cart.xml" value="0.2359375" />
         <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/activity_profile_main.xml" value="0.25" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/count_fragment_layout.xml" value="0.25" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/single_cart_design.xml" value="0.25" />
         <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/single_row_design.xml" value="0.25" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/layout/template.xml" value="0.25" />
-        <entry key="..\:/Users/Furqan/Desktop/Semester 07/SMD/Final Project/Forever Traders/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.105078125" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_cart.xml" value="0.11200000000000002" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_cart2.xml" value="0.13524590163934427" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_forgot_password.xml" value="0.152" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_login.xml" value="0.1647940074906367" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_profile_main.xml" value="0.2" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_seassion.xml" value="0.2" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/activity_view_email.xml" value="0.18681693989071038" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/fragment_resetpassword.xml" value="0.16" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/single_row_design.xml" value="0.13046448087431695" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/template.xml" value="0.176" />
+        <entry key="..\:/Users/langa/AndroidStudioProjects/Forever-Traders-App/app/src/main/res/layout/view_email_fragment.xml" value="0.2" />
       </map>
     </option>
   </component>
@@ -22,5 +27,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.18681693989071038" />
+      </ProjectState>
+    </option>
   </component>
 </project>
