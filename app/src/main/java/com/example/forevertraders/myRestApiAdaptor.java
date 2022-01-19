@@ -43,7 +43,7 @@ public class myRestApiAdaptor extends RecyclerView.Adapter<myRestApiAdaptor.View
 
         holder.restTitle.setText(title);
         holder.price.setText(price);
-        Integer id=(int) list.get(position).getId();
+        float id=(float) list.get(position).getId();
         Glide.with(context).load(list.get(position).getImage()).into(holder.imageView);
         holder.v.setOnClickListener(new View.OnClickListener() {
             @Override

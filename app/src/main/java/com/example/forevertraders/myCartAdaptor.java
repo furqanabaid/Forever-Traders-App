@@ -1,11 +1,13 @@
 package com.example.forevertraders;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,10 +35,32 @@ public class myCartAdaptor extends RecyclerView.Adapter<myCartAdaptor.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.restTitle.setText(list.get(position).getTitle());
-        holder.price.setText(list.get(position).getPrice());
-        Glide.with(context).load(list.get(position).getImage()).into(holder.imageView);
-        holder.Description.setText(list.get(position).getDescription());
+        String title=list.get(position).getTitle();
+        String price=list.get(position).getPrice();
+        String description=list.get(position).getDescription();
+        String catagory=list.get(position).getCategory();
+        String image=list.get(position).getImage();
+
+        holder.restTitle.setText(title);
+        holder.price.setText(price);
+        holder.description.setText(description);
+        holder.catagory.setText(catagory);
+        Glide.with(context).load(image).into(holder.imageView);
+        holder.v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent=new Intent(context,addToCart.class);
+//                intent.putExtra("id",id);
+//                intent.putExtra("title",title);
+//                intent.putExtra("price",price);
+//                intent.putExtra("description",description);
+//                intent.putExtra("catagory",catagory);
+//                intent.putExtra("url",image);
+//                Toast.makeText(context, " "+image, Toast.LENGTH_SHORT).show();
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -45,16 +69,18 @@ public class myCartAdaptor extends RecyclerView.Adapter<myCartAdaptor.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView restTitle,price,Description;
+        TextView restTitle,price,id,description,catagory;
         ImageView imageView;
-
+        View v;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             restTitle = itemView.findViewById(R.id.title_cart);
             imageView=itemView.findViewById(R.id.cartImage);
             price=itemView.findViewById(R.id.price_cart);
-            Description=itemView.findViewById(R.id.description_cart);
+            id=itemView.findViewById(R.id.id_cart);
+            description=itemView.findViewById(R.id.description_cart);
+            catagory=itemView.findViewById(R.id.catagory_cart);
+            v=itemView;
         }
-
     }
 }

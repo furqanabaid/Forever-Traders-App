@@ -3,6 +3,7 @@
     package="com.example.forevertraders">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -21,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ViewEmailActivity"
+            android:name=".ForgotPasswordTwo"
             android:exported="true"></activity>
         <activity
-            android:name=".ForgotPasswordActivity"
+            android:name=".ForgotPassword"
             android:exported="true"></activity>
         <activity
             android:name=".loginActivity"
@@ -36,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SeassionActivity"
+            android:name=".Signup"
             android:exported="true"></activity>
         <activity
             android:name=".addToCart"

@@ -1,10 +1,19 @@
 package com.example.forevertraders;
 
 public class myRestApiModel {
-    private float userId;
     private float id;
     private String title;
     private String price;
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    int quantity;
 
     public String getCategory() {
         return category;
@@ -21,6 +30,10 @@ public class myRestApiModel {
     }
 
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     private String description;
 
     public String getImage() {
@@ -36,8 +49,8 @@ public class myRestApiModel {
     public myRestApiModel() {
     }
 
-    public myRestApiModel(float userId, float id, String title, String body, String image,String description,String catagory) {
-        this.userId = userId;
+    public myRestApiModel( float id, String title, String body, String image,String description,String catagory,int count) {
+        this.quantity =count;
         this.category =catagory;
         this.id = id;
         this.title = title;
@@ -46,10 +59,6 @@ public class myRestApiModel {
         this.description=description;
     }
 // Getter Methods
-
-    public float getUserId() {
-        return userId;
-    }
 
     public float getId() {
         return id;
@@ -64,10 +73,6 @@ public class myRestApiModel {
     }
 
     // Setter Methods
-
-    public void setUserId(float userId) {
-        this.userId = userId;
-    }
 
     public void setId(float id) {
         this.id = id;
