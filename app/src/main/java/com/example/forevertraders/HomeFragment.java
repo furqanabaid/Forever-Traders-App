@@ -61,9 +61,9 @@ return view;
             public void onResponse(Call<List<myRestApiModel>> call, Response<List<myRestApiModel>> response) {
                 if(response.body().size()>0){
                     List<myRestApiModel> list=response.body();
-                    myRestApiAdaptor adaptor=new myRestApiAdaptor(list,getContext().getApplicationContext());
+                    myRestApiAdaptor adaptor=new myRestApiAdaptor(list,getContext());
                     LinearLayoutManager linearLayoutManager=
-                            new LinearLayoutManager(getContext().getApplicationContext(),LinearLayoutManager.HORIZONTAL,true);
+                            new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,true);
                     onSaleNow.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
                     onSaleNow.setAdapter(adaptor);
 //                    Snackbar.make(view,"Data received",Snackbar.LENGTH_SHORT).show();
