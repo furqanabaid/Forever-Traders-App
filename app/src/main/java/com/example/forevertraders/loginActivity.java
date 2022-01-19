@@ -31,11 +31,11 @@ public class loginActivity extends AppCompatActivity {
     }
 
     public void Reset_password(View view) {
-        startActivity(new Intent(loginActivity.this,ForgotPasswordActivity.class));
+        startActivity(new Intent(loginActivity.this, ForgotPassword.class));
     }
 
     public void signup(View view) {
-        startActivity(new Intent(loginActivity.this,SeassionActivity.class));
+        startActivity(new Intent(loginActivity.this, Signup.class));
     }
 
     public void login(View view) {

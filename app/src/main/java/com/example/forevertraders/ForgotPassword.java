@@ -3,7 +3,6 @@ package com.example.forevertraders;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ForgotPasswordActivity extends AppCompatActivity {
+public class ForgotPassword extends AppCompatActivity {
 
     ConstraintLayout layout;
     Button reset;
@@ -39,15 +38,15 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful())
                 {
-                    Toast.makeText(ForgotPasswordActivity.this, "Reset Link has been sent to your Email Address.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgotPassword.this, "Reset Link has been sent to your Email Address.", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
-                    Toast.makeText(ForgotPasswordActivity.this, "Failed to send link.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgotPassword.this, "Failed to send link.", Toast.LENGTH_SHORT).show();
 
                 }
             }
         });
-    startActivity(new Intent(ForgotPasswordActivity.this,ViewEmailActivity.class));
+    startActivity(new Intent(ForgotPassword.this, ForgotPasswordTwo.class));
     }
 }

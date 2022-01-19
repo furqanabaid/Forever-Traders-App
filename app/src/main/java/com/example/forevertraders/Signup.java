@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SeassionActivity extends AppCompatActivity {
+public class Signup extends AppCompatActivity {
 
     private EditText emailTextView,nameTextView, passwordTextView;
     private Button Btn;
@@ -29,7 +29,7 @@ public class SeassionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seassion);
+        setContentView(R.layout.activity_sign_up);
 
         // taking FirebaseAuth instance
         mAuth = FirebaseAuth.getInstance();
@@ -107,18 +107,18 @@ public class SeassionActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()) {
-                                        Toast.makeText(SeassionActivity.this, "User added successfuly", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Signup.this, "User added successfuly", Toast.LENGTH_SHORT).show();
                                     }
                                     else
                                     {
-                                        Toast.makeText(SeassionActivity.this, "Failed to add user", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Signup.this, "Failed to add user", Toast.LENGTH_SHORT).show();
 
                                     }
                                 }
                             });
                             // if the user created intent to login activity
                             Intent intent
-                                    = new Intent(SeassionActivity.this,
+                                    = new Intent(Signup.this,
                                     MainActivity.class);
                             startActivity(intent);
                         }
