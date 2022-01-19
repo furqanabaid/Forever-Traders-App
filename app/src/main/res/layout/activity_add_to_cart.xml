@@ -138,6 +138,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/minus"
                     android:layout_width="wrap_content"
@@ -146,8 +147,8 @@
                     android:backgroundTint="@color/white"
                     android:foregroundGravity="center"
                     android:onClick="btn_minus"
-                    android:src="@drawable/minus">
-                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                    android:src="@drawable/minus"
+                    tools:ignore="SpeakableTextPresentCheck"></com.google.android.material.floatingactionbutton.FloatingActionButton>
                 <TextView
                     android:id="@+id/countText"
                     android:layout_width="50dp"
@@ -168,7 +169,8 @@
                     android:backgroundTint="@color/white"
                     android:foregroundGravity="center"
                     android:onClick="btn_plus"
-                    android:src="@drawable/plus"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+                    android:src="@drawable/plus"
+                    tools:ignore="SpeakableTextPresentCheck"></com.google.android.material.floatingactionbutton.FloatingActionButton>
             </LinearLayout>
             <Button
                 android:id="@+id/button5"

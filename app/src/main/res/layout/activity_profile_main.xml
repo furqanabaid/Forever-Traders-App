@@ -75,15 +75,29 @@
             <TextView
                 android:id="@+id/email_1"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/text_border"
                 android:padding="10dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:text="Email"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20dp"></TextView>
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="251dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/fragment"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                </FrameLayout>
+            </LinearLayout>
 
             <Button
                 android:id="@+id/button5"

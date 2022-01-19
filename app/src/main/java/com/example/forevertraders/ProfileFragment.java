@@ -5,12 +5,13 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,6 +28,7 @@ public class ProfileFragment extends Fragment {
     DatabaseReference fobj;
     String uid;
     Button logout;
+    LinearLayout l;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +38,7 @@ public class ProfileFragment extends Fragment {
         name=view.findViewById(R.id.name_1);
         email=view.findViewById(R.id.email_1);
         logout=view.findViewById(R.id.button5);
+        l=view.findViewById(R.id.l1);
         fobj= FirebaseDatabase.getInstance().getReference().child("Users");
         fauth= FirebaseAuth.getInstance();
         uid=fauth.getCurrentUser().getUid();
@@ -62,6 +65,11 @@ public class ProfileFragment extends Fragment {
                 startActivity(in);
         }
     });
+
+        MapsFragment fragment= new MapsFragment();
+        FragmentTransaction transaction=getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.l1,fragment);
+        transaction.commit();
         return view;
     }
 
