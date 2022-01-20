@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cart"
     android:background="#333333">
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/materialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        android:text="Store Names to SQL Database"
+        android:textColor="@color/black"
+        app:cornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.google.android.material.button.MaterialButton>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recVIew"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton"></androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

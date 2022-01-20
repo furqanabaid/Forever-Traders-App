@@ -23,6 +23,7 @@ public class MergeActivity extends AppCompatActivity {
         ProfileFragment profileFragment=new ProfileFragment();
         HomeFragment homeFragment=new HomeFragment();
         CartFragment cartFragment =new CartFragment();
+        //SpinAndWin spinAndWin=new SpinAndWin();
         FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment,homeFragment);
         transaction.commit();
@@ -49,6 +50,12 @@ public class MergeActivity extends AppCompatActivity {
                         transaction2.replace(R.id.fragment,profileFragment);
                         transaction2.commit();
                         return true;
+                    case R.id.SpinAndWin:
+//                        FragmentTransaction transaction3=getSupportFragmentManager().beginTransaction();
+//                        transaction3.replace(R.id.fragment,spinAndWin);
+//                        transaction3.commit();
+                        Intent intent=new Intent(MergeActivity.this,SpinAndWin.class);
+                        startActivity(intent);
                 }
 
                 return false;

@@ -1,6 +1,7 @@
 package com.example.forevertraders;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ public class SpinAndWin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spin_and_win);
+        setTitle("Spin and Win");
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
         lottieAnimationView=findViewById(R.id.spinANdWin_animation);
         serviceIntent=new Intent(getApplicationContext(),MyService.class);
     }

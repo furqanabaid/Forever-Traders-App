@@ -20,6 +20,7 @@
         android:theme="@style/Theme.ForeverTraders">
         <activity
             android:name=".SpinAndWin"
+            android:parentActivityName=".MergeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
