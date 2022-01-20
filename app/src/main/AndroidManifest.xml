@@ -72,6 +72,7 @@
         <activity
             android:name=".addToCart"
             android:exported="true" />
+        <service android:name=".MyService"/>
     </application>
 
 </manifest>
