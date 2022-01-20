@@ -16,4 +16,9 @@
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile"/>
+    <item
+        android:id="@+id/SpinAndWin"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_games_24"
+        android:title="Spin Win"/>
 </menu>
