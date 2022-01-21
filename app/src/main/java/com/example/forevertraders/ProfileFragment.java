@@ -46,19 +46,27 @@ public class ProfileFragment extends Fragment {
     FloatingActionButton editImage;
     Bitmap bitmap;
     ImageView imageView;
+    SharedPreferences sharedPreferences;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= (View) inflater.inflate(R.layout.activity_profile_main,container,false);
-        name=view.findViewById(R.id.name_1);
-        email=view.findViewById(R.id.email_1);
-        editImage=view.findViewById(R.id.editImage);
-        logout=view.findViewById(R.id.button5);
-        l=view.findViewById(R.id.l1);
-        imageView=view.findViewById(R.id.imageView);
-        fobj= FirebaseDatabase.getInstance().getReference().child("Users");
-        fauth= FirebaseAuth.getInstance();
+        View view = (View) inflater.inflate(R.layout.activity_profile_main, container, false);
+        name = view.findViewById(R.id.name_1);
+        email = view.findViewById(R.id.email_1);
+        editImage = view.findViewById(R.id.editImage);
+        logout = view.findViewById(R.id.button5);
+        l = view.findViewById(R.id.l1);
+        imageView = view.findViewById(R.id.imageView);
+        fobj = FirebaseDatabase.getInstance("https://forevertraders-f504f-default-rtdb.firebaseio.com/").getReference().child("Users");
+        fauth = FirebaseAuth.getInstance();
+       sharedPreferences = getActivity().getApplicationContext().getSharedPreferences("MySharedPref",MODE_PRIVATE);
+        return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
         uid=fauth.getCurrentUser().getUid();
         editImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,8 +81,7 @@ public class ProfileFragment extends Fragment {
         fobj.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MySharedPref",MODE_PRIVATE);
-                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                 SharedPreferences.Editor myEdit = sharedPreferences.edit();
                 myEdit.putString("name", snapshot.child(uid).child("name").getValue(String.class));
                 myEdit.putString("email", snapshot.child(uid).child("email").getValue(String.class));
                 myEdit.commit();
@@ -89,32 +96,31 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-    logout.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
-            builder.setMessage("Do you want to Logout ?");
-            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    fauth.signOut();
-                    Intent in = new Intent(new Intent(getContext(),loginActivity.class));
-                    in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    getActivity().finish();
-                    startActivity(in);
-                }
-            }).setNegativeButton("No",null);
-            AlertDialog alert= builder.create();
-            alert.show();
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+                builder.setMessage("Do you want to Logout ?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        fauth.signOut();
+                        Intent in = new Intent(new Intent(getContext(),loginActivity.class));
+                        in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        getActivity().finish();
+                        startActivity(in);
+                    }
+                }).setNegativeButton("No",null);
+                AlertDialog alert= builder.create();
+                alert.show();
 
-        }
-    });
+            }
+        });
 
         MapsFragment fragment= new MapsFragment();
         FragmentTransaction transaction=getActivity().getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.l1,fragment);
         transaction.commit();
-        return view;
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode ,@Nullable Intent data) {
@@ -133,5 +139,4 @@ public class ProfileFragment extends Fragment {
             }
         }
     }
-
 }

@@ -1,5 +1,6 @@
 package com.example.forevertraders;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +18,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -35,6 +41,7 @@ public class addToCart extends AppCompatActivity {
     String image;
     float id_product;
     DatabaseReference myRef;
+    Button add_to_cart_btn;
     int count = 1;
     Toolbar toolbar;
     private String id;
@@ -44,7 +51,7 @@ public class addToCart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_to_cart);
         //setTitle("Add to Cart");
-
+        add_to_cart_btn=findViewById(R.id.button5);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Add to cart");
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -96,42 +103,45 @@ public class addToCart extends AppCompatActivity {
         model.setQuantity(count);
         id = myRef.push().getKey();
         model.setId(id_product);
-        myRef.child(fauth.getCurrentUser().getUid()).child("Carts").child(id).setValue(model);
-        //Notification
-//        Intent activityIntent = new Intent(this, CartFragment.class);
-//        PendingIntent contentIntent = PendingIntent.getActivity(this,
-//                0, activityIntent, 0);
         String title = title_fb;
         String message = "New item added to your cart!";
-
-        NotificationCompat.Builder builder =
-                new NotificationCompat.Builder(this)
-                        .setAutoCancel(true)
-                        .setSmallIcon(R.drawable.ic_one)
-                        .setContentTitle("Notifications Example")
-                        .setContentText("This is a test notification");
-
-        Intent notificationIn = new Intent(this, addToCart.class);
-        PendingIntent contentIn = PendingIntent.getActivity(this, 0, notificationIn,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(contentIn);
-        NotificationChannel channel=new NotificationChannel("id","notification",NotificationManager.IMPORTANCE_DEFAULT);
-        NotificationManager manager1=getSystemService(NotificationManager.class);
-manager1.createNotificationChannel(channel);
-        // Add as notification
-        NotificationManagerCompat manager = NotificationManagerCompat.from(addToCart.this);
-        manager.notify(0, builder.build());
-
-//       ` Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
-//                .setSmallIcon(R.drawable.ic_one)
-//                .setContentTitle(title)
-//                .setContentText(message)
-//                .setPriority(NotificationCompat.PRIORITY_HIGH)
-//                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-//                .setColor(Color.BLUE)
-//                .build();
+        myRef.child(fauth.getCurrentUser().getUid()).child("Carts").child(id).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+//                    NotificationCompat.Builder builder =
+//                            new NotificationCompat.Builder(addToCart.this)
+//                                    .setAutoCancel(true)
 //
-//        notificationManager.notify(0, notification);
-//    }`
+//                                    .setSmallIcon(R.drawable.ic_one)
+//                                    .setContentTitle("Notifications Example")
+//                                    .setContentIntent(null)
+//                                    .setContentText("This is a test notification")
+//                                    .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+//
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//                        CharSequence name = "HEllo";
+//                        String description = "i love you";
+//                        int importance = NotificationManager.IMPORTANCE_DEFAULT;
+//                        NotificationChannel channel = new NotificationChannel(CHANNEL_1_ID, name, importance);
+//                        channel.setDescription(description);
+//                        // Register the channel with the system; you can't change the importance
+//                        // or other notification behaviors after this
+//                        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+//                        notificationManager.createNotificationChannel(channel);
+//
+//                    }
+//                    NotificationManagerCompat notificationManager = NotificationManagerCompat.from(addToCart.this);
+//                    notificationManager.notify(1, builder.build());
+                    Toast.makeText(getApplicationContext(), "Added to Cart Successfully", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Failed To add", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+        //Notification
+
     }
 }

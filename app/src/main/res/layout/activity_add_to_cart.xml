@@ -172,18 +172,19 @@
                     android:src="@drawable/plus"
                     tools:ignore="SpeakableTextPresentCheck"></com.google.android.material.floatingactionbutton.FloatingActionButton>
             </LinearLayout>
+
             <Button
                 android:id="@+id/button5"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/white"
                 android:onClick="addToCart"
                 android:text="Add to Cart"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
