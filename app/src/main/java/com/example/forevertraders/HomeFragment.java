@@ -103,7 +103,7 @@ public class HomeFragment extends Fragment {
                 }
                 @Override
                 public void onFailure(Call<List<myRestApiModel>> call, Throwable t) {
-                Toast.makeText(getContext(), "Data Recieve Failed.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Data Recieve Failed.", Toast.LENGTH_SHORT).show();
                 }
             });
             return null;
