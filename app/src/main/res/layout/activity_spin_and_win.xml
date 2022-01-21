@@ -47,4 +47,53 @@
             android:textColor="@color/black">
         </com.google.android.material.button.MaterialButton>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Using File Handling">
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:onClick="storeResult"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="Store Result"></Button>
+        <Button
+            android:onClick="showResult"
+            android:layout_width="wrap_content"
+            android:text="Show Result"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"></Button>
+    </LinearLayout>
+        <TextView
+            android:id="@+id/fileResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Your Result Here"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:background="@drawable/text_border">
+        </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Using Shared Preferences">
+    </TextView>
+
 </LinearLayout>
