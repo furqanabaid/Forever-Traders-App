@@ -1,7 +1,11 @@
 package com.example.forevertraders;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -69,8 +73,14 @@ public class ProfileFragment extends Fragment {
         fobj.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                name.setText(snapshot.child(uid).child("name").getValue(String.class));
-                email.setText(snapshot.child(uid).child("email").getValue(String.class));
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MySharedPref",MODE_PRIVATE);
+                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                myEdit.putString("name", snapshot.child(uid).child("name").getValue(String.class));
+                myEdit.putString("email", snapshot.child(uid).child("email").getValue(String.class));
+                myEdit.commit();
+
+                name.setText(sharedPreferences.getString("name","NULL"));
+                email.setText(sharedPreferences.getString("email","NULL"));
             }
 
             @Override
